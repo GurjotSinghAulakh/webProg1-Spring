@@ -1,13 +1,13 @@
-package oslomet.webprogspring;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebProgSpringApplication {
+public class DemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebProgSpringApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
 }
