@@ -1,12 +1,10 @@
 Oblig 1
-=======
-OsloMet brukernavn: s351873
 
 GitHub brukernavn: GurjotSinghAulakh
 
-GitHub repo URL: https://github.com/DATA1700/oblig-1-GurjotSinghAulakh
+GitHub repo URL: https://github.com/GurjotSinghAulakh/webProg1-Spring
 
-URL til Heroku app: https://oblig-1-gurjotsinghaulakh.herokuapp.com/
+URL til Heroku app: https://webprog1-project-spring.herokuapp.com/
 
 Fullt navn: Gurjot Singh Aulakh
 
