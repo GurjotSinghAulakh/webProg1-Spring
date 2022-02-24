@@ -1,5 +1,3 @@
-Oblig 1
-
 GitHub brukernavn: GurjotSinghAulakh
 
 GitHub repo URL: https://github.com/GurjotSinghAulakh/webProg1-Spring
