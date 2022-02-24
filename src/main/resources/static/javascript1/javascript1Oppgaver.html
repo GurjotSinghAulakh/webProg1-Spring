@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 1 - Ukeoppgaver</title>
+    <script src="javascript1Oppgaver.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!---------------------------------- Overskrift: ---------------------------------->
+    <h1>JavaScript 1 (Variabler, funksjoner og hendelser) - Ukeoppgaver</h1>
+
+    <!---------------------------------- Oppgave 1: ----------------------------------->
+    <!--- Metode 1: ------>
+    <div class="container">
+        <h3 id="oppg1">Oppgave 1 : </h3>
+        <p>
+            Lag en HTML-knapp som kaller en JavaScript-funksjon som viser "Hei verden" på en
+            blank side via "document.write". Bruk hendelsen "onClick" på knappen.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <!--- Metode 1: ------>
+        <p>Metode 1: </p>
+        <input type="button" value="Hei Verden!" onclick="heiVerden();" /><br />
+
+        <!--- Linjeskkift ----->
+        <br>
+
+        <!--- Metode 2: ------>
+        <p>Metode 2: </p>
+        <button onclick="heiVerden()">Hei Verden!</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <button onclick="visFasit(1)">Vis Løsningsforslag</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <!--- Metode 1: ------>
+                <p>Metode 1: </p>
+                <input type="button" value="Hei Verden!" onclick="heiVerden();" /><br />
+
+                <!--- Linjeskkift ----->
+                <br>
+
+                <!--- Metode 2: ------>
+                <p>Metode 2: </p>
+                <button onclick="heiVerden()">Hei Verden!</button>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function heiVerden() {
+                    document.write("Hei Verden!!");
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 2: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg2">Oppgave 2 : </h3>
+        <p>
+            Gjør om oppgave 1 til å vise en "alert"-boks når knappen trykkes.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <!--- Metode 1: ------>
+        <p>Metode 1: </p>
+        <input type="button" value="Hei Verden!" onclick="heiVerdenAlert();" /><br />
+
+        <!--- Linjeskkift ----->
+        <br>
+
+        <!--- Metode 2: ------>
+        <p>Metode 2: </p>
+        <button onclick="heiVerdenAlert()">Hei Verden!</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <button onclick="visFasit(2)">Vis Løsningsforslag</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2 con2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <!--- Metode 1: ------>
+                <p>Metode 1: </p>
+                <input type="button" value="Hei Verden!" onclick="heiVerdenAlert();" /><br />
+
+                <!--- Linjeskkift ----->
+                <br>
+
+                <!--- Metode 2: ------>
+                <p>Metode 2: </p>
+                <button onclick="heiVerdenAlert()">Hei Verden!</button>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function heiVerdenAlert() {
+                    alert("Hei Verden!!");
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 3: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg3">Oppgave 3: </h3>
+        <p>
+            Lag et input-felt i en HTML-side. Lag et JavaScript som leser dataene fra input-feltet
+            når det er endringer i feltet (hendelsen "onChange") og som skriver disse dataene ut på
+            en blank side med "document.write". Funksjonen som kalles ved "onChange" skal ta en
+            inn-parameter, som er verdien av input-feltet.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <p>Skriv melding:
+            <label>
+                <input type="text" onchange="skrivMelding(this.value);" /><br />
+            </label>
+        </p>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <p>Skriv melding:
+                    <label>
+                        <input type="text" onchange="skrivMelding(this.value);" /><br />
+                    </label>
+                </p>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function skrivMelding(innData) {
+                    let utData = "Du har skrevet inn følgende data: " + innData + ".";
+                    document.write(utData);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 4: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg4">Oppgave 4: </h3>
+        <p>
+            Endre oppgave 3 ved å legge ut en "pop-up/alert"-boks som skal inneholde teksten
+            fra input-feltet.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <p>Skriv melding:
+            <label>
+                <input type="text" onchange="writeAlert(this.value);" /><br />
+            </label>
+        </p>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <p>Skriv melding:
+                    <label>
+                        <input type="text" onchange="writeAlert(this.value);" /><br />
+                    </label>
+                </p>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function writeAlert(innData) {
+                    let utData = "Du har skrevet inn følgende data: " + innData + ".";
+                    alert(utData);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 5: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg5">Oppgave 5: </h3>
+        <p>
+            Utvid oppgave 4 med å skrive informasjonen fra input-feltet til "console.log".
+            Sjekk at dataene blir skrevet til loggen.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <p>Skriv melding:
+            <label>
+                <input type="text" onchange="writeConsole(this.value);" /><br />
+            </label>
+        </p>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <p>Skriv melding:
+                    <label>
+                        <input type="text" onchange="writeConsole(this.value);" /><br />
+                    </label>
+                </p>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function writeConsole(innData) {
+                    let utData = "Du har skrevet inn følgende data: " + innData + ".";
+                    console.log(utData);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!--- Linjeskkift ----->
+    <br><br>
+
+    <h2>Ekstraoppgaver</h2>
+
+    <!--- Linjeskkift ----->
+    <br><br>
+    <!---------------------------------- Oppgave 6: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg6">Oppgave 6: </h3>
+        <p>
+            Utvid oppgave 3 ved å gi et farge til teksten som vises på blank side.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <p>Melding får en blått farge:
+            <label>
+                <input type="text" onchange="fargetMelding(this.value)" /><br />
+            </label>
+        </p>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <p>Melding får en blått farge:
+                    <label>
+                        <input type="text" onchange="fargetMelding(this.value);" /><br />
+                    </label>
+                </p>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function fargetMelding(innData) {
+                    let utData = "Du har skrevet inn følgende data: " + innData + ".";
+                    let melding = utData.fontcolor("blue"); //.fontcolor brukes til å endre farge
+                    document.write(melding);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 7: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg7">Oppgave 7: </h3>
+        <p>
+            Utvid oppgave 4 ved å vise input i alert boks i store bokstaver.
+        </p>
+
+        <i><b> Løsning: </b></i>
+
+        <p>Stor bokstaver:
+            <label>
+                <input type="text" onchange="storBokstaver(this.value)" /><br />
+            </label>
+        </p>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <p>Stor bokstaver:
+                    <label>
+                        <input type="text" onchange="storBokstaver(this.value);" /><br />
+                    </label>
+                </p>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function storBokstaver(innData) {
+                    let utData = "Du har skrevet inn følgende data: " + innData + ".";
+                    let melding = utData.toUpperCase(); // .toUpperCase() brukes til å få store bokstaver.
+                    alert(melding);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 8: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg8">Oppgave 8: </h3>
+        <p>
+            Lag et knapp som skriver tall “1” til console (bruk console.log) hver gang den trykkes.
+        </p>
+
+        <i><b> Løsning: </b></i>
+        <input type="button" value="Skriver ut tallet 1 i console!!" onclick="skrivUtEn();" /><br />
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <input type="button" value="Skriver ut tallet 1 i console!!" onclick="skrivUtEn();" /><br />
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                function skrivUtEn() {
+                    const utData = 1;
+                    console.log(utData);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 9: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg9">Oppgave 9: </h3>
+        <p>
+            Utvid oppgave 8 slik at den skriver til console antall ganger knapp ble trykket. (Tell opp fra 1)
+        </p>
+
+        <i><b> Løsning: </b></i>
+        <button onclick="tellOpp()">Tell antall click</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <button onclick="tellOpp()">Tell antall click</button>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                let utData = 0;
+
+                function tellOpp() {
+                    utData ++;
+                    console.log(utData);
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <!---------------------------------- Oppgave 10: ----------------------------------->
+    <div class="container">
+        <h3 id="oppg10">Oppgave 10: </h3>
+        <p>
+            Endre oppgave 9 ved å legge til en melding til console slik at den viser
+            "Du har trykket på knappen X ganger" (hvor X er antall ganger knappen
+            ble trykket på).
+        </p>
+
+        <i><b> Løsning: </b></i>
+        <button onclick="tellOppMelding()">Meldding om antall click</button>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+
+        <div class="container2">
+            <h3> HTML : </h3>
+            <!--- Viser koden på nettsiden ------>
+            <xmp>
+                <button onclick="tellOppMelding()">Meldding om antall click</button>
+            </xmp>
+
+            <h3> JavaScript (JS) : </h3>
+            <xmp>
+                let ut = 0;
+
+                function tellOppMelding() {
+                    ut++;
+                    console.log("Du har trykket på knappen " + ut + " ganger.");
+                }
+            </xmp>
+        </div>
+
+        <!--- Linjeskkift ----->
+        <br><br>
+    </div>
+
+    <p>A Collapsible:</p>
+    <button class="collapsible">Open Collapsible</button>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+
+
+
+</body>
+</html>
